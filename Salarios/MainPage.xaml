@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salarios.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Salario Basico" VerticalOptions="Center"/>
+            <Entry x:Name="EntrySalario" Keyboard="Numeric" Placeholder="Ingreses su salario basico"/>
+            <Label Text="Aportes a salud" VerticalOptions="Center"/>
+            <Entry x:Name="EntryAporteSalud" IsEnabled="False" Text="{Binding AporteSalud, StringFormat='C'}"/>
+            <Label Text="Aporte a Pension" VerticalOptions="Center"/>
+            <Entry x:Name="EntryAportePension" IsEnabled="False" Text="{Binding AportePension, StringFormat='C'}"/>
+            <Label Text="Aporte FPS" VerticalOptions="Center"/>
+            <Entry x:Name="EntryFpsAporteContribucion" IsEnabled="False" Text="{Binding FpsAporteContribucion, StringFormat='C'}"/>
+            <Label Text="Salario Neto A Recibir" VerticalOptions="Center"/>
+            <Entry x:Name="EntrySalarioNeto" IsEnabled="False" Text="{Binding SalarioNeto, StringFormat='C'}"/>
+            <Button Text="Calcular" Clicked="ButtonCalculate_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
